@@ -14,7 +14,7 @@ const Routes = () => {
     <Router>
       <Switch>
         {/* <Route exact path="/" render={() => <Redirect to="/admin/dashboard" />} /> */}
-        <Route path="/auth" component={AuthScreen} />
+        <Route path="/" component={AuthScreen} />
         <Route component={NotFound} />
       </Switch>
     </Router>
