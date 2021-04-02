@@ -1,0 +1,11 @@
+{
+    "name": "witl-admin",
+    "regex": {
+        "name": "^[A-Za-z]{2,}(\\d*|([ a-zA-Z]{2,})*)$",
+        "email": "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,})+$",
+        "phone": "^[+]?[(]?\\d{3}[)]?[-\\s\\.]?\\d{3}[-\\s\\.]?\\d{4,6}$",
+        "url": "^(http(s)?://.)?(www\\.)?[-a-zA-Z0-9@:%.\\+~#=]{2,256}\\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)$"
+      },
+    "BASE_URL": "https://admin.witl.mobi/api/v1/",
+    "IMAGE_URL": "https://admin-image.witl.mobi/"
+}
