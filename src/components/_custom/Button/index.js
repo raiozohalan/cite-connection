@@ -1,35 +1,44 @@
-import { Button, IconButton, makeStyles } from "@material-ui/core" 
+import { 
+    Button,
+    IconButton
+} from "@mui/material"
 
-const useStyles = makeStyles( theme => ({
+import { makeStyles } from "@mui/styles"
+
+const useStyles = makeStyles({
     button: { 
-        background: "green",
         color: "white",
         padding: 10, 
+        width: 100,
     },
-    buttonDisabled: {
+
+    iconButton: { 
+        color: "white",
+        padding: 10, 
+        width: 100
+    },
+    iconButtonDisabled: {
         background: "grey",
         color: "white",
         padding: 10, 
     }
-
-}))
+})
 
 const CustomButton = (props) => {
     const {
         type,
-        label,
-        disabled,
+        label, 
         ...rest
     } = props
 
-    const classes = useStyles( { disabled } )
+    const classes = useStyles()
     return(
         type === "button" ? (
-            <Button {...rest} className={classes.button} disabled={disabled}>
+            <Button {...rest} className={classes.button}>
                 {label}
             </Button>
         ) : (
-            <IconButton {...rest} className={classes.button}  disabled={disabled}>
+            <IconButton {...rest} className={classes.iconButton}>
                 {label}
             </IconButton>
         )
